@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'incomeexpenses.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-?
+
 
 # visit for settings: https://djangostars.com/blog/configuring-django-settings-best-practices/
 # https://djangostars.com/blog/configuring-django-settings-best-practices/
