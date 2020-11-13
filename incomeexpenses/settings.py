@@ -29,7 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #SECRET_KEY = '$-s91w(u5rbtyt4akka%$1(z50=q#@$9@1cr=uui7jpfo6+!^k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+##Change 2:
+#DEBUG = True
 
 ALLOWED_HOSTS = ['incomeexpenses.herokuapp.com']
 
@@ -171,6 +172,8 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 #########################Heroku deployment#############################
 # pip install gunicorn
 SECRET_KEY = config('SECRET_KEY') #alternative of Change 1.
+DEBUG = (config('DEBUG_VALUE') == 'True') #alternative of Change 1.
+
 # https://pypi.org/project/django-heroku/
 # pip install django-heroku
 import django_heroku
