@@ -13,11 +13,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 from decouple import config
 from django.contrib import messages
-# https://pypi.org/project/django-heroku/
-# pip install django-heroku
-import django_heroku
 
-# pip install gunicorn
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -168,7 +166,12 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
-django_heroku.settings(locals())
+
 
 #########################Heroku deployment#############################
+# pip install gunicorn
 SECRET_KEY = config('SECRET_KEY') #alternative of Change 1.
+# https://pypi.org/project/django-heroku/
+# pip install django-heroku
+import django_heroku
+django_heroku.settings(locals())
