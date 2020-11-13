@@ -27,7 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$-s91w(u5rbtyt4akka%$1(z50=q#@$9@1cr=uui7jpfo6+!^k'
+##Change 1:
+#SECRET_KEY = '$-s91w(u5rbtyt4akka%$1(z50=q#@$9@1cr=uui7jpfo6+!^k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -168,3 +169,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
 django_heroku.settings(locals())
+
+#########################Heroku deployment#############################
+SECRET_KEY = config('SECRET_KEY') #alternative of Change 1.
